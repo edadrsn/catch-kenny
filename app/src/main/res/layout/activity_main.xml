@@ -1,0 +1,222 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FDECEC"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="CATCH KENNY"
+            android:textColor="#000000"
+            android:textSize="37sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.5">
+
+            <ImageView
+                android:id="@+id/userKenny"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toStartOf="@+id/userName"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/kenny"
+                tools:layout_editor_absoluteY="212dp" />
+
+            <EditText
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="12"
+                android:fontFamily="casual"
+                android:hint="User Name"
+                android:inputType="text"
+                android:textColor="#0F0909"
+                android:textColorHint="#565151"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/userKenny"
+                tools:layout_editor_absoluteY="217dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/btnSave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.5">
+
+            <ImageView
+                android:id="@+id/userKenny2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toStartOf="@+id/userName"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/kenny"
+                tools:layout_editor_absoluteY="212dp" />
+
+            <EditText
+                android:id="@+id/userEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="12"
+                android:fontFamily="casual"
+                android:hint="User Email"
+                android:inputType="text"
+                android:textColor="#0F0909"
+                android:textColorHint="#565151"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="72dp"
+                tools:layout_editor_absoluteY="306dp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="CHOOSE YOUR KENNY"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSave"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="263dp"
+            android:layout_height="71dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/startGame"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.5">
+
+
+            <ImageView
+                android:id="@+id/kennyPink"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/kenny_pink"
+                tools:layout_editor_absoluteX="80dp"
+                tools:layout_editor_absoluteY="570dp" />
+
+            <ImageView
+                android:id="@+id/kennyOriginal"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/kenny"
+                tools:layout_editor_absoluteX="189dp"
+                tools:layout_editor_absoluteY="570dp" />
+
+            <ImageView
+                android:id="@+id/kennyBlue"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginRight="20dp"
+                app:srcCompat="@drawable/kenny_blue"
+                tools:layout_editor_absoluteX="305dp"
+                tools:layout_editor_absoluteY="570dp" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/startGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF5722"
+            android:fontFamily="casual"
+            android:text="START GAME"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:enabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF5722"
+            android:fontFamily="casual"
+            android:text="SAVE"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF5722"
+            android:fontFamily="casual"
+            android:text="DELETE"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnSave"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

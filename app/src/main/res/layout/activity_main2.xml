@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#FDECEC"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/textScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:fontFamily="casual"
+        android:text="YOUR SCORE:"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:fontFamily="casual"
+        android:text="TİME:20"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:visibility="invisible"
+        android:id="@+id/gridLayoutOriginal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTime"
+        app:layout_constraintVertical_bias="0.5">
+
+
+        <ImageView
+            android:id="@+id/imgOriginal1"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny" />
+
+        <ImageView
+            android:id="@+id/imgOriginal2"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny" />
+
+        <ImageView
+            android:id="@+id/imgOriginal3"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny" />
+
+        <ImageView
+            android:id="@+id/imgOriginal4"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny" />
+
+        <ImageView
+            android:id="@+id/imgOriginal5"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny" />
+
+        <ImageView
+            android:id="@+id/imgOriginal6"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny" />
+
+        <ImageView
+            android:id="@+id/imgOriginal7"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny" />
+
+        <ImageView
+            android:id="@+id/imgOriginal8"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny" />
+
+        <ImageView
+            android:id="@+id/imgOriginal9"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny" />
+
+    </GridLayout>
+
+
+    <GridLayout
+        android:visibility="invisible"
+        android:id="@+id/gridLayoutPink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTime"
+        app:layout_constraintVertical_bias="0.5">
+
+
+        <ImageView
+            android:id="@+id/imgPink1"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_pink" />
+
+        <ImageView
+            android:id="@+id/imgPink2"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_pink" />
+
+        <ImageView
+            android:id="@+id/imgPink3"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_pink" />
+
+        <ImageView
+            android:id="@+id/imgPink4"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_pink" />
+
+        <ImageView
+            android:id="@+id/imgPink5"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_pink" />
+
+        <ImageView
+            android:id="@+id/imgPink6"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_pink" />
+
+        <ImageView
+            android:id="@+id/imgPink7"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_pink" />
+
+        <ImageView
+            android:id="@+id/imgPink8"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_pink" />
+
+        <ImageView
+            android:id="@+id/imgPink9"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_pink" />
+
+    </GridLayout>
+
+
+    <GridLayout
+        android:visibility="invisible"
+        android:id="@+id/gridLayoutBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTime"
+        app:layout_constraintVertical_bias="0.5">
+
+
+        <ImageView
+            android:id="@+id/imgBlue1"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_blue" />
+
+        <ImageView
+            android:id="@+id/imgBlue2"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_blue" />
+
+        <ImageView
+            android:id="@+id/imgBlue3"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_blue" />
+
+        <ImageView
+            android:id="@+id/imgBlue4"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_blue" />
+
+        <ImageView
+            android:id="@+id/imgBlue5"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_blue" />
+
+        <ImageView
+            android:id="@+id/imgBlue6"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_blue" />
+
+        <ImageView
+            android:id="@+id/imgBlue7"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_blue" />
+
+        <ImageView
+            android:id="@+id/imgBlue8"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_blue" />
+
+        <ImageView
+            android:id="@+id/imgBlue9"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:onClick="scoreIncrease"
+            app:srcCompat="@drawable/kenny_blue" />
+
+    </GridLayout>
+
+
+
+    <GridLayout
+        android:visibility="invisible"
+        android:id="@+id/gridLayoutCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTime"
+        app:layout_constraintVertical_bias="0.5">
+
+
+        <ImageView
+            android:id="@+id/cat1"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="scoreDecrease"
+            app:srcCompat="@drawable/cat" />
+        <ImageView
+            android:id="@+id/cat2"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:onClick="scoreDecrease"
+            app:srcCompat="@drawable/cat" />
+        <ImageView
+            android:id="@+id/cat3"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:onClick="scoreDecrease"
+            app:srcCompat="@drawable/cat" />
+        <ImageView
+            android:id="@+id/cat4"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:onClick="scoreDecrease"
+            app:srcCompat="@drawable/cat" />
+        <ImageView
+            android:id="@+id/cat5"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:onClick="scoreDecrease"
+            app:srcCompat="@drawable/cat" />
+        <ImageView
+            android:id="@+id/cat6"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:onClick="scoreDecrease"
+            app:srcCompat="@drawable/cat" />
+        <ImageView
+            android:id="@+id/cat7"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:onClick="scoreDecrease"
+            app:srcCompat="@drawable/cat" />
+        <ImageView
+            android:id="@+id/cat8"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:onClick="scoreDecrease"
+            app:srcCompat="@drawable/cat" />
+        <ImageView
+            android:id="@+id/cat9"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:onClick="scoreDecrease"
+            app:srcCompat="@drawable/cat" />
+
+
+    </GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
