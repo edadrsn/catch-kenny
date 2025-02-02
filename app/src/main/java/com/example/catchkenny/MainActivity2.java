@@ -29,7 +29,7 @@ public class MainActivity2 extends AppCompatActivity {
     private ImageView imgCat1,imgCat2,imgCat3,imgCat4,imgCat5,imgCat6,imgCat7,imgCat8,imgCat9;
     private GridLayout gridLayoutPink,gridLayoutBlue,gridLayoutOriginal,gridLayoutCat;
     ImageView[] imageArray, imageArrayOriginal,imageArrayPink,imageArrayBlue,imgArrayCat;
-    int score,remainingTime=20000;
+    int score;
     Handler handler;
     Runnable runnable;
     String userName,userEmail;
@@ -171,7 +171,6 @@ public class MainActivity2 extends AppCompatActivity {
     public void scoreDecrease(View view){
         score=score-2;
         textScore.setText(userName+" SCORE : " + score);
-        textTime.setText("TIME:"+remainingTime/1000);
     }
 
     public void hideImages(){
