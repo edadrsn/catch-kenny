@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         storedScore=sharedPreferences.getInt("score",0);
 
 
-
+        //Giriş sayfasında turuncu,mavi veya pembe Kenny seçimleri için onClick fonksiyonu oluşturuldu ve pasif olan startGame butonu aktif edildi.
         kennyOriginal.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Oyunu başlatmak için startGame butonu tanımlandı.
         startGame.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
+        //Kullanıcı bilgilerini kaydetmek için btnSave butonu oluşturuldu.
         btnSave.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -100,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        //Kayıtları silmek için btnDelete adında bir buton tanımlandı.
         btnDelete.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
