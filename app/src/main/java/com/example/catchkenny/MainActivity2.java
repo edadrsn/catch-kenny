@@ -44,6 +44,7 @@ public class MainActivity2 extends AppCompatActivity {
         userName=sharedPreferences.getString("userName","");
         userEmail=sharedPreferences.getString("userEmail","");
 
+        //Grid Layout içerisine yerleştirilecek olan imagelar tanımlandı.
         score=0;
         textTime=(TextView)findViewById(R.id.textTime);
         textScore=(TextView)findViewById(R.id.textScore);
@@ -87,6 +88,7 @@ public class MainActivity2 extends AppCompatActivity {
         imgCat8=(ImageView)findViewById(R.id.cat8);
         imgCat9=(ImageView)findViewById(R.id.cat9);
 
+        //Grid Layoutlara id tanımlandı çünkü seçilen kenny resmine göre ilgili layoutlar visible yapılacak.
         gridLayoutOriginal=(GridLayout)findViewById(R.id.gridLayoutOriginal);
         gridLayoutPink=(GridLayout)findViewById(R.id.gridLayoutPink);
         gridLayoutBlue=(GridLayout)findViewById(R.id.gridLayoutBlue);
@@ -99,6 +101,7 @@ public class MainActivity2 extends AppCompatActivity {
         imgArrayCat=new ImageView[] {imgCat1,imgCat2,imgCat3,imgCat4,imgCat5,imgCat6,imgCat7,imgCat8,imgCat9};
         hideImages();
 
+        //İlk activityden gelen veriye göre ilgili layoutlar visible yapıldı
         Intent intent=getIntent();
         String selectedKenny=intent.getStringExtra("selectedKenny");
         if(selectedKenny.matches("pink")){
@@ -117,13 +120,16 @@ public class MainActivity2 extends AppCompatActivity {
             imageArray=imageArrayOriginal;
         }
 
+        //Oyun başladığı andan itibaren bir sayaç oluşturuldu
         new CountDownTimer(20000,1000){
 
+            //Her saniyede bir time yazısını güncelliyor
             @Override
             public void onTick(long millisUntilFinished) {
                 textTime.setText("TIME:"+millisUntilFinished/1000);
             }
 
+            //Sayaç bittiğinde kullanıcının yaptığı en yüksek skor gösterilir ve yeniden başlamak isteyip istemediği alert dialog ile soruluyor
             @Override
             public void onFinish() {
                 textTime.setText("TIME OFF !");
@@ -159,6 +165,7 @@ public class MainActivity2 extends AppCompatActivity {
         }.start();
     }
 
+    //Resimlere tıklandığında skoru artırmak için fonksiyon oluşturuldu
     public void scoreIncrease(View view){
         score++;
         textScore.setText(userName+ " SCORE : " + score);
@@ -168,11 +175,14 @@ public class MainActivity2 extends AppCompatActivity {
         }
     }
 
+    //Kedi resimlerine basıldığında skoru 2 azaltmak için fonksiyon oluşturuldu
     public void scoreDecrease(View view){
         score=score-2;
         textScore.setText(userName+" SCORE : " + score);
     }
 
+    //Handler ve Runnable oluşturuldu. for döngüsü ile dizideki resimlerin üzerinde gezildi ve görünümleri invisible yapıldı sonrasında random iki adet random sayı oluşturularak 
+    //ilk random sayıyla ilgil indexteki image görünür yapıldı diğer random sayı ile rastgele gelen indexteki kedi resmi görünür yapıldı ve kedi resimlerine basılınca scoreDecreasemetodu çağrılarak skor azaltıldı 
     public void hideImages(){
         handler=new Handler();
         runnable= new Runnable() {
